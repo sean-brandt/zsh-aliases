@@ -21,7 +21,7 @@ Plugins[ZSH_EXA_ALIASES_DIR]="${0:h}"
 autoload -Uz terra
 autoload -Uz docker_prune
 
-for i in *.aliases.zsh; do
+for i in ${0:h}/*.aliases.zsh; do
     source "$i"
 done
 
