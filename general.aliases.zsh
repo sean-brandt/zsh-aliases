@@ -7,6 +7,10 @@
 
 alias grep='rg'
 
+alias reload!='exec "$SHELL" -l'
+
+alias top='htop'
+
 
 # Use alternate vim marks [[[ and ]]] as the original ones can
 # confuse nested substitutions, e.g.: ${${${VAR}}}
