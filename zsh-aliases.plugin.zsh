@@ -18,6 +18,7 @@ if [[ ${zsh_loaded_plugins[-1]} != */zsh-aliases && -z ${fpath[(r)${0:h}]} ]] {
 typeset -gA Plugins
 Plugins[ZSH_EXA_ALIASES_DIR]="${0:h}"
 
+autoload -Uz terra
 autoload -Uz docker_prune
 
 for i in *.aliases.zsh; do
