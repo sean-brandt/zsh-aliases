@@ -5,19 +5,6 @@
 # According to the Zsh Plugin Standard:
 # http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html
 
-0=${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}
-0=${${(M)0:#/*}:-$PWD/$0}
-
-# Then ${0:h} to get plugin's directory
-
-if [[ ${zsh_loaded_plugins[-1]} != */zsh-exa-aliases && -z ${fpath[(r)${0:h}]} ]] {
-    fpath+=( "${0:h}" )
-}
-
-# Standard hash for plugins, to not pollute the namespace
-typeset -gA Plugins
-Plugins[ZSH_EXA_ALIASES_DIR]="${0:h}"
-
 alias ls='exa -F --group-directories-first'
 alias l='exa -lbF --group-directories-first'
 alias ll='exa -lbGF --git --group-directories-first'
